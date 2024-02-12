@@ -1,5 +1,3 @@
-
-
 chmod 755 -R wp-content
 chmod 755 -R wp-content/uploads
 
