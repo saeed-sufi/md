@@ -40,14 +40,31 @@ To see the processes that are listening for connections;
 `/etc/apt/trusted.gpg.d
 
 # To list the running processes:
-ps aux | less
-ps -ax | grep v2ray // now you know the process id
+`ps aux | less`
+`ps -ax | grep v2ray` // now you know the process id
 
 # To kill a process
-pkill -15 firefox
-kill -15 <process_id> or kill -9 <proccess_id>
+`pkill -15 firefox`
+`kill -15 <process_id> `or `kill -9 <proccess_id>`
 
 # To see the errors for cron jobs running on your machine, see the postfix output:
-cat /var/mail/saeedsoofi
+`cat /var/mail/saeedsoofi`
 
+* Bash keeps the history in the buffer and doesn't write it to the history log until you log out.
 
+* To repeat the last command: `!!`
+
+* If you want to see what's been added in real time to the end of a file, use `-f` flag with `tail` command: `tail -f output.txt`
+
+* While `ctrl + c` sends the `SIGINT` signal (short for signal intrrupt), `ctrl + d` sends the `SiGQUIT` signal which is a stronger signal.
+
+* These are the ways to quit VIM (first make sure you're in the command mode by hitting escape): 
+  
+  * `:q` if you haven't made any changes to the file.
+  * `:wq` saves the file and quits.
+  * `:q!` if you don't want to save changes.
+  * `:qa` go to hell VIM.
+  
+* `less` command is good for reading long files. You can use `\searchterm` to search for sth while in `less`.
+
+* To create multiple folders nested into each other: `mkdir -p my
