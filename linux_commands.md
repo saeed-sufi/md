@@ -97,3 +97,10 @@ To see the processes that are listening for connections;
 
 * You can run subcommands inside `$()`. For example, `echo the current date is $(date)`.
 
+* `wget` is the network version of `cp`. It copies the content of the provided link. `curl` can do more. For example, you can pipe things with `curl` into other commands.
+
+* The only thing that `wgeyt` can do that `curl` can't, is that with `wget` you can do recursive download.
+
+* `curl` is perfect for testing api endpoints. 
+
+* Never pipe what you're `curl`ing into bash unless you have 100% confidence in the domain you're `curl`ing. Always write it into a file and read the content and then (after making sure it's safe) execute it. 
