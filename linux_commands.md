@@ -67,4 +67,13 @@ To see the processes that are listening for connections;
   
 * `less` command is good for reading long files. You can use `\searchterm` to search for sth while in `less`.
 
-* To create multiple folders nested into each other: `mkdir -p my
+* To create multiple folders nested into each other: `mkdir -p my/nested/folder`
+
+* To `tar` the files and folders: `tar -zcf archive.tar.gz file1 folder1` and to `untar` them `tar -xzf archive.tar.gz destination`.
+
+* `&` after a command means run it in the background. For example: `yes > /dev/null &`.
+
+* To see the list of users: `cat /etc/passwd`
+
+* `sudo su` will create a session where you are the superuser. Write `exit` to exit this session.
+
