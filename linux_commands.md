@@ -77,3 +77,23 @@ To see the processes that are listening for connections;
 
 * `sudo su` will create a session where you are the superuser. Write `exit` to exit this session.
 
+* To create new user `sudo useradd brian` and set a password for this user: `sudo passwd brian` and then you switch user by `su brian`.
+
+* To give the new user sudo privilages: `sudo usermod -aG sudo brian`. This command will add brian to the sudo group.
+
+* To check the environment variables set in Shell: `printenv`.
+
+* To set new environment variables edit this file: `sudo nano /etc/environment`. Everytime your bash session starts up it's going to read the env variables. The variables defined in this file are available to every user.
+
+* If you want to define `env` variables that are available to your user (not everyone) then define and `export` them in your `~/.bashrc` or `~/.zshrc` file. Every user has his own `~/.bashrc`.
+
+* `ps` shows what you as the user is running and `ps aux` shows what processes all the users are running. 
+
+* You can list the `jobs` running in the background by: `jobs`. Or press `Ctrl + z` to pause a running process. And say `bg 1` to run the process again in the background or `fg 1` to bring the process back to the foreground.
+
+* If a commands returns a zero, it means the process finished succefully. You can check if the returned value is `0` by `echo $?`. Anything other that `0` means the process did not finish successfully. 
+
+* The `&&` operator between commands runs only if the command prior to `&&` returns `0`.
+
+* You can run subcommands inside `$()`. For example, `echo the current date is $(date)`.
+
