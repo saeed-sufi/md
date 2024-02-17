@@ -104,3 +104,7 @@ To see the processes that are listening for connections;
 * `curl` is perfect for testing api endpoints. 
 
 * Never pipe what you're `curl`ing into bash unless you have 100% confidence in the domain you're `curl`ing. Always write it into a file and read the content and then (after making sure it's safe) execute it. 
+
+* You can search for packages usign `apt`: `apt search node`. And `apt show node` to see all the info available for the package.
+
+* Run `.sh` scripts using one of these 3 methods: `source script.sh`, `. script.sh` or `bash script.sh`. It's interesting to note that bash uses a separate sub-process to run the script whereas the other methods use the same process. 
