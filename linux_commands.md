@@ -108,3 +108,9 @@ To see the processes that are listening for connections;
 * You can search for packages usign `apt`: `apt search node`. And `apt show node` to see all the info available for the package.
 
 * Run `.sh` scripts using one of these 3 methods: `source script.sh`, `. script.sh` or `bash script.sh`. It's interesting to note that bash uses a separate sub-process to run the script whereas the other methods use the same process. 
+
+* Bash figures out where all of the programs are by looking at the `PATH` variable.
+
+* You can have your own folder of shell programs added to `PATH` so that you can run them like any other program. To do so, add to `.zshrc` this line: `export PATH~/my_bin:$PATH`.
+
+ 
