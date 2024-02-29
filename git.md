@@ -89,5 +89,3 @@
   `git config --global --list` 
 
 * To store git token `git config credential.helper store` and to clear it `git config --unset credential.helper`
-
-merge conflic fixed.
