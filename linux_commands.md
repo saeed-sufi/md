@@ -114,3 +114,4 @@ To see the processes that are listening for connections;
 * You can have your own folder of shell programs added to `PATH` so that you can run them like any other program. To do so, add to `.zshrc` this line: `export PATH~/my_bin:$PATH`.
 
  
+ bug fixed critical.
