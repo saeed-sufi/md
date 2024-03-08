@@ -87,3 +87,4 @@
   `git config --global alias.hist "log --oneline --graph --decorate --all"`
 * to check the alias entries and other info.
   `git config --global --list` 
+  

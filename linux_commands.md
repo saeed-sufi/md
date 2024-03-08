@@ -99,7 +99,7 @@ To see the processes that are listening for connections;
 
 * `wget` is the network version of `cp`. It copies the content of the provided link. `curl` can do more. For example, you can pipe things with `curl` into other commands.
 
-* The only thing that `wgeyt` can do that `curl` can't, is that with `wget` you can do recursive download.
+* The only thing that `wget` can do that `curl` can't, is that with `wget` you can do recursive download.
 
 * `curl` is perfect for testing api endpoints. 
 
