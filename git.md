@@ -87,4 +87,5 @@
   `git config --global alias.hist "log --oneline --graph --decorate --all"`
 * to check the alias entries and other info.
   `git config --global --list` 
-  
+
+* To store git token `git config credential.helper store` and to clear it `git config --unset credential.helper`
