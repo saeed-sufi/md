@@ -91,3 +91,5 @@
 * To store git token `git config credential.helper store` and to clear it `git config --unset credential.helper`
 
 * To stash changes: `git stash` and to see the list of stashes: `git stash list`. To get back to the changes: `git stash pop`.
+
+* To store access token in git config: `git config --global credential.helper store`
