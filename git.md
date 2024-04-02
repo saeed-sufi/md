@@ -5,11 +5,6 @@
 
 * Git command who am I
 `  git config --list
-`
-`  git add -A
-`
-`  git commit -m 'testing git'
-`
 * prints commits: `git log --oneline
 `
 * to go back a specific commit:
@@ -18,8 +13,6 @@
   `git checkout -- .`
 * remove staged file and from cache and move it back to untracked files.
   `git rm --cached index.html`
-* A short report of status
-  `git status -s`
 * In order to delete .git 
   `rm -rf .git`
 * `git remote add origin https://github.com/saeed-sufi/travel-agency.git`
@@ -36,23 +29,14 @@
 * to see the status of local and remote branches:
   `git remote show origin`
 * if you don't need to commit changes to a specific file.`git reset app/index.html` 
-* once you commit all the changes and the working directory is clean, you can create a new branch:
-  `git branch count-to-ten`
-  `git checkout count-to-ten `
-* once you have finished working on a branch you are ready to merge it to the master branch. First be sure to checkout to master branch and then execute the following:
-  `git merge count-to-ten`
 
-  `git push origin count-to-fifteen`
 * to delete a branch
   `git branch -d count-to-fifteen`
 * create a new branch and check out to it in one move: 
   `git checkout -b our-features`
 * if you want a dedicated commit for the merge so that all the commits could be reviewed in one place and (in case you have lots of commits already), then it's better to merge with disabled fast forward.
   `git merge our-features --no-ff`
-* show a list of branches:
-  `git branch`
-  `git show-branch`
-  `git branch -a`
+  
 * This will get all the files at repo ready and available
   `git fetch `
   `git pull origin .gitignore` 
@@ -85,11 +69,10 @@
 
 * To create a `hist` alias:
   `git config --global alias.hist "log --oneline --graph --decorate --all"`
+  
 * to check the alias entries and other info.
   `git config --global --list` 
 
 * To store git token `git config credential.helper store` and to clear it `git config --unset credential.helper`
 
 * To stash changes: `git stash` and to see the list of stashes: `git stash list`. To get back to the changes: `git stash pop`.
-
-* To store access token in git config: `git config --global credential.helper store`
