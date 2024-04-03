@@ -112,3 +112,10 @@ To see the processes that are listening for connections;
 * Bash figures out where all of the programs are by looking at the `PATH` variable.
 
 * You can have your own folder of shell programs added to `PATH` so that you can run them like any other program. To do so, add to `.zshrc` this line: `export PATH~/my_bin:$PATH`.
+
+# some handy terminal commands
+ll: to list files and folders
+CTRL + r: to search among your command history
+take: to create a folder and move into it in one go
+-: to get back to the previous directory 
+open: to open the directory in window explorer gui
