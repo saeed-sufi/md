@@ -6,3 +6,6 @@
 
 * To stop and remove containers and images and volumes that were created using docker compose:
 `docker compose down --rmi all -v`
+
+* To connect to postgres container (find the ip using `docker inspect`):
+`psql -h 172.18.0.3 -p 5432 -U postgres -d postgres`
