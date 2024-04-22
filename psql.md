@@ -23,4 +23,11 @@
 
   ` \d users `
 
+* **To see the column names of a table:**
 
+  `\d <table_name>`
+  
+* **To see how much time a query takes:**
+
+  `\timing`
+  
