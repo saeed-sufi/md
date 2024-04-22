@@ -31,3 +31,15 @@
 
 * Dont' use `:onbuild` versions of node images. 
 
+* Always use `USER node` in your dockerfiles after `apt/apk` or `npm i -g` commands that require root user. But use it before regular `npm install` command so that you only give write permissions wherever your app really needs to have such permission. 
+
+
+* After you set `User node`, only these 3 commands use this user to do their job: `RUN`, `Entrypoint` and `CMD`. Other commands do not respect this user. For example, the `WORKDIR` commands always uses the `root user` even if you've previously set the user to node. The way to get around this problem of `WORKDIR` is: `RUN mkdir app && chown -R node:node`
+
+
+* By default `docker compose exec` set you as `node` user if it sees `USER node` in the Dockerfile. If you need to change this behaviour, do this: `docker compose exec -u root`.
+
+
+* Make sure to give the node user permisions for copying files: `COPY --chown=node:node . .`. This might not be required for all apps but it's a best practice to do it since some apps may run into permission problems. 
+
+
