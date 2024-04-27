@@ -43,3 +43,8 @@
 * Make sure to give the node user permisions for copying files: `COPY --chown=node:node . .`. This might not be required for all apps but it's a best practice to do it since some apps may run into permission problems. 
 
 
+* To perform a gracefull shutdown of you node app in a contaier, add this code in your node app:
+https://github.com/BretFisher/docker-mastery-for-nodejs/blob/4cd605de4e80f002d7ce876c0e20cd93564f9481/sample-graceful-shutdown/sample.js
+
+
+
