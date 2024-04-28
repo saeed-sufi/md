@@ -27,4 +27,6 @@
   `npm update`
 
 
+* To change npm registry address to that of PART:
 
+`npm config set registry https://npm.partdp.ir

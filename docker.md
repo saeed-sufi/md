@@ -34,7 +34,7 @@
 * Always use `USER node` in your dockerfiles after `apt/apk` or `npm i -g` commands that require root user. But use it before regular `npm install` command so that you only give write permissions wherever your app really needs to have such permissions. 
 
 
-* After you set `User node`, only these 3 commands use this user to do their job: `RUN`, `Entrypoint` and `CMD`. Other commands do not respect this user. For example, the `WORKDIR` command always uses the `root user` even if you've previously set the user to node. The way to get around this problem of `WORKDIR` is: `RUN mkdir app && chown -R node:node`
+* After you set `User node`, only these 3 commands use this user to do their job: `RUN`, `Entrypoint` and `CMD`. Other commands do not respect this user. For example, the `WORKDIR` command always uses the `root user` even if you've previously set the user to node. The way to get around this problem of `WORKDIR` is: `RUN mkdir app && chown -R node:node app`
 
 
 * By default `docker compose exec` set you as `node` user if it sees `USER node` in the Dockerfile. If you need to change this behaviour, do this: `docker compose exec -u root`.
@@ -43,8 +43,18 @@
 * Make sure to give the node user permisions for copying files: `COPY --chown=node:node . .`. This might not be required for all apps but it's a best practice to do it since some apps may run into permission problems. 
 
 
+* A temporary solution for node app to listen for linux signals:
+`docker run --init -d node-app`
+
+
 * To perform a gracefull shutdown of you node app in a contaier, add this code in your node app:
 https://github.com/BretFisher/docker-mastery-for-nodejs/blob/4cd605de4e80f002d7ce876c0e20cd93564f9481/sample-graceful-shutdown/sample.js
+
+
+* Docker manages multiple `replicas` or `tasks` of node which means it can run multiple instance of node. In fact, multiple containers will run off the same image. 
+
+
+* Docker uses linux signals to stop app (SIGINT / SIGTERM / SIGKILL).
 
 
 
