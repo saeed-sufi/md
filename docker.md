@@ -57,4 +57,15 @@ https://github.com/BretFisher/docker-mastery-for-nodejs/blob/4cd605de4e80f002d7c
 * Docker uses linux signals to stop app (SIGINT / SIGTERM / SIGKILL).
 
 
+* To get the container IP address run the following command:
+
+`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_id_or_name>`
+
+
+* To enable rabbitmq management interface and access it in browser (localhost:15672):
+
+`docker exec -it rabbitmqvideoverification rabbitmq-plugins enable rabbitmq_management`
+
+* Put `docker-compose*.yml` file inside `.dockerignore`. It contains lots of info about your app and you don't want a bad guy to have access to it. 
+
 
