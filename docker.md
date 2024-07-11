@@ -68,4 +68,15 @@ https://github.com/BretFisher/docker-mastery-for-nodejs/blob/4cd605de4e80f002d7c
 
 * Put `docker-compose*.yml` file inside `.dockerignore`. It contains lots of info about your app and you don't want a bad guy to have access to it. 
 
+* Run the following command to run postgres:
+```
+docker run --name postgres \
+    -e POSTGRES_USER=postgres \
+    -e POSTGRES_PASSWORD=ev3VJFD5jAR6b9@ \
+    -e POSTGRES_DB=farashenasa \
+    -p 5432:5432 \
+    -v my_postgres_data:/var/lib/postgresql/data \
+    -d postgres:16.3-bookworm
+```
+
 

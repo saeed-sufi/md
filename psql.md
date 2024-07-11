@@ -19,10 +19,6 @@
 
   ` \c todo `
 
-* **To see the details of a table:**
-
-  ` \d users `
-
 * **To see the column names of a table:**
 
   `\d <table_name>`
