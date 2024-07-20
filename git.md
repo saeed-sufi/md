@@ -76,3 +76,13 @@
 * To store git token `git config credential.helper store` and to clear it `git config --unset credential.helper`
 
 * To stash changes: `git stash` and to see the list of stashes: `git stash list`. To get back to the changes: `git stash pop`.
+
+* To modify a specific commit do the following. Note that this will change the history from that commit forward. Also, you may run into merge conflicts with the new
+er commits.
+```
+git rebase --interactive bbc64cdd~
+change `pick` to `edit`
+git commit -all --amend --no-edit
+git rebase --continue
+```
+
