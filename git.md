@@ -85,4 +85,3 @@ change `pick` to `edit`
 git commit -all --amend --no-edit
 git rebase --continue
 ```
-
